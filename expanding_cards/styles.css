@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+* {
+  box-sizing: border-box; /*if we add an padding or boder to any element it doesnt affect the width */
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  display: flex; /* because we are centering everything in this poject i.e middle of the viewport */
+
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /*take up the entire height of the browser*/
+  overflow: hidden; /* no scroll bars */
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  max-height: 100%;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+
+.panel h3 {
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+}
+
+.active {
+  background-image: url('images/Mount-Everest.png');
+}
+
+.k2 {
+  background-image: url('images/Mount-K2.jpg');
+}
+
+.kang {
+  background-image: url('images/Kangchenjunga.jpg');
+}
+
+.lhotse {
+  background-image: url('images/Lhotse.jpg');
+}
+
+.makalu {
+  background-image: url('images/Makalu.jpg');
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
+}
