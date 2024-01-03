@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Josefin+Sans:wght@300;500&family=Roboto:wght@400;700&family=Rubik:wght@400;500;700;900&display=swap');
+* {
+  box-sizing: border-box; /*if we add an padding or boder to any element it doesnt affect the width */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex; /* because we are centering everything in this poject i.e middle of the viewport */
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /*take up the entire height of the browser*/
+  overflow: hidden; /* no scroll bars */
+  margin: 0;
+}
